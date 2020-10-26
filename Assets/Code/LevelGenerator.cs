@@ -8,7 +8,8 @@ public class LevelGenerator : MonoBehaviour
     private GameObject brickPrefab;
     void Start()
     {
-        for(int j = 0; j < 5; j++)
+        Cursor.visible = false;
+        for (int j = 0; j < 5; j++)
         {
             for (int i = -7; i < 8; i++)
             {
@@ -42,6 +43,7 @@ public class LevelGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Cursor.visible = true;
     }
 }
