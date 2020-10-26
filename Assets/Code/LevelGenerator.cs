@@ -8,11 +8,35 @@ public class LevelGenerator : MonoBehaviour
     private GameObject brickPrefab;
     void Start()
     {
-        for(int i = -7; i < 8; i++)
+        for(int j = 0; j < 5; j++)
         {
-            GameObject tempObj = Instantiate(brickPrefab, new Vector2(i, 6), Quaternion.identity, transform);
+            for (int i = -7; i < 8; i++)
+            {
+                GameObject tempObj = Instantiate(brickPrefab, new Vector2(i, j+3), Quaternion.identity, transform);
+                if (j == 0)
+                {
+                    tempObj.GetComponent<SpriteRenderer>().color = Color.red;
+                }
+                if (j == 1)
+                {
+                    tempObj.GetComponent<SpriteRenderer>().color = Color.blue;
+                }
+                if (j == 2)
+                {
+                    tempObj.GetComponent<SpriteRenderer>().color = Color.yellow;
+                }
+                if (j == 3)
+                {
+                    tempObj.GetComponent<SpriteRenderer>().color = Color.green;
+                }
+                if (j == 4)
+                {
+                    tempObj.GetComponent<SpriteRenderer>().color = Color.magenta;
+                }
 
+            }
         }
+       
     }
 
     // Update is called once per frame
