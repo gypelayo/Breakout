@@ -5,9 +5,13 @@ using UnityEngine;
 public class PaddleController : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private bool ballReleased;
+    private GameObject ball;
     void Start()
     {
+        ballReleased = false;
         rb = GetComponent<Rigidbody2D>();
+        ball = transform.GetChild(0).gameObject;
     }
 
     // Update is called once per frame
@@ -18,6 +22,13 @@ public class PaddleController : MonoBehaviour
 
         transform.position = new Vector2(worldPosition.x, transform.position.y);
         
+        if(Input.GetKeyDown(KeyCode.Mouse0) && !ballReleased)
+        {
+            ballReleased = true;
+            ball.transform.parent = null;
+            ball.GetComponent<Rigidbody2D>().AddForce(Vector3.up * 10, ForceMode2D.Impulse);
 
+
+        }
     }
 }
