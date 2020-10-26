@@ -45,7 +45,7 @@ public class PaddleController : MonoBehaviour
             }
             if(distToCenter >= 0.25f && distToCenter < 0.5f)
             {
-                collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.right) * 10, ForceMode2D.Impulse);
+                collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.right).normalized * 10, ForceMode2D.Impulse);
             }
             if (distToCenter >= 0.5f)
             {
@@ -54,7 +54,7 @@ public class PaddleController : MonoBehaviour
 
             if (distToCenter <= -0.25f && distToCenter > -0.5f)
             {
-                collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.left) * 10, ForceMode2D.Impulse);
+                collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.left).normalized * 10, ForceMode2D.Impulse);
             }
             if (distToCenter <= -0.5f)
             {
@@ -66,4 +66,6 @@ public class PaddleController : MonoBehaviour
 
         }
     }
+
+
 }
