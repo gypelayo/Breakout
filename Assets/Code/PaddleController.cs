@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class PaddleController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Rigidbody2D rb;
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        Vector2 screenPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        Vector2 worldPosition = Camera.main.ScreenToWorldPoint(screenPosition);
+
+        transform.position = new Vector2(worldPosition.x, transform.position.y);
         
+
     }
 }
