@@ -6,6 +6,9 @@ public class PaddleController : MonoBehaviour
 {
     private Rigidbody2D rb;
     private bool ballReleased;
+
+    [SerializeField]
+    private float ballSpeed;
     private GameObject ball;
     void Start()
     {
@@ -26,7 +29,7 @@ public class PaddleController : MonoBehaviour
         {
             ballReleased = true;
             ball.transform.parent = null;
-            ball.GetComponent<Rigidbody2D>().AddForce(Vector3.up * 10, ForceMode2D.Impulse);
+            ball.GetComponent<Rigidbody2D>().AddForce(Vector3.up * ballSpeed, ForceMode2D.Impulse);
         }
     }
 
@@ -36,9 +39,7 @@ public class PaddleController : MonoBehaviour
         {
             collision.collider.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             float distToCenter = collision.transform.position.x - transform.position.x;
-            collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + 2 * new Vector2(distToCenter, 0).normalized).normalized * 10, ForceMode2D.Impulse);
+            collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + 2 * new Vector2(distToCenter, 0).normalized).normalized * ballSpeed, ForceMode2D.Impulse);
         }
     }
-
-
 }
