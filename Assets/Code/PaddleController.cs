@@ -27,8 +27,6 @@ public class PaddleController : MonoBehaviour
             ballReleased = true;
             ball.transform.parent = null;
             ball.GetComponent<Rigidbody2D>().AddForce(Vector3.up * 10, ForceMode2D.Impulse);
-
-
         }
     }
 
@@ -38,32 +36,7 @@ public class PaddleController : MonoBehaviour
         {
             collision.collider.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             float distToCenter = collision.transform.position.x - transform.position.x;
-            
-            if(distToCenter>=-0.25f && distToCenter < 0.25f)
-            {
-                collision.collider.GetComponent<Rigidbody2D>().AddForce(Vector2.up*10, ForceMode2D.Impulse);
-            }
-            if(distToCenter >= 0.25f && distToCenter < 0.5f)
-            {
-                collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.right).normalized * 10, ForceMode2D.Impulse);
-            }
-            if (distToCenter >= 0.5f)
-            {
-                collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + 2*Vector2.right).normalized * 10, ForceMode2D.Impulse);
-            }
-
-            if (distToCenter <= -0.25f && distToCenter > -0.5f)
-            {
-                collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.left).normalized * 10, ForceMode2D.Impulse);
-            }
-            if (distToCenter <= -0.5f)
-            {
-                collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + 2 * Vector2.left).normalized * 10, ForceMode2D.Impulse);
-            }
-
-
-
-
+            collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + 2 * new Vector2(distToCenter,0).normalized).normalized * 10, ForceMode2D.Impulse);
         }
     }
 
