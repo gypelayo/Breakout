@@ -9,28 +9,28 @@ public class LevelGenerator : MonoBehaviour
     void Start()
     {
         Cursor.visible = false;
-        for (int j = 0; j < 5; j++)
+        for (int line = 0; line< 5; line++)
         {
-            for (int i = -7; i < 8; i++)
+            for (int column = -7; column < 8; column++)
             {
-                GameObject tempObj = Instantiate(brickPrefab, new Vector2(i, j + 3), Quaternion.identity, transform);
-                if (j == 0)
+                GameObject tempObj = Instantiate(brickPrefab, new Vector2(column, line + 3), Quaternion.identity, transform);
+                if (line == 0)
                 {
                     tempObj.GetComponent<SpriteRenderer>().color = Color.red;
                 }
-                if (j == 1)
+                if (line == 1)
                 {
                     tempObj.GetComponent<SpriteRenderer>().color = Color.blue;
                 }
-                if (j == 2)
+                if (line == 2)
                 {
                     tempObj.GetComponent<SpriteRenderer>().color = Color.yellow;
                 }
-                if (j == 3)
+                if (line == 3)
                 {
                     tempObj.GetComponent<SpriteRenderer>().color = Color.green;
                 }
-                if (j == 4)
+                if (line == 4)
                 {
                     tempObj.GetComponent<SpriteRenderer>().color = Color.magenta;
                 }
