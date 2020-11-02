@@ -42,4 +42,9 @@ public class PaddleController : MonoBehaviour
             collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + 2 * new Vector2(distToCenter, 0).normalized).normalized * ballSpeed, ForceMode2D.Impulse);
         }
     }
+
+    public void setSpeed(float ballSpeed)
+    {
+        this.ballSpeed = ballSpeed;
+    }
 }
