@@ -13,7 +13,7 @@ public class LevelGenerator : MonoBehaviour
         {
             for (int i = -7; i < 8; i++)
             {
-                GameObject tempObj = Instantiate(brickPrefab, new Vector2(i, j+3), Quaternion.identity, transform);
+                GameObject tempObj = Instantiate(brickPrefab, new Vector2(i, j + 3), Quaternion.identity, transform);
                 if (j == 0)
                 {
                     tempObj.GetComponent<SpriteRenderer>().color = Color.red;
@@ -34,16 +34,16 @@ public class LevelGenerator : MonoBehaviour
                 {
                     tempObj.GetComponent<SpriteRenderer>().color = Color.magenta;
                 }
-
             }
         }
-       
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
+        {
             Cursor.visible = true;
+        }
     }
 }

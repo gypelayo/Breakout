@@ -36,7 +36,7 @@ public class PaddleController : MonoBehaviour
         {
             collision.collider.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             float distToCenter = collision.transform.position.x - transform.position.x;
-            collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + 2 * new Vector2(distToCenter,0).normalized).normalized * 10, ForceMode2D.Impulse);
+            collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + 2 * new Vector2(distToCenter, 0).normalized).normalized * 10, ForceMode2D.Impulse);
         }
     }
 
