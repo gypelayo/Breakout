@@ -14,7 +14,7 @@ public class PaddleController : MonoBehaviour
     void Start()
     {
         ballReleased = false;
-        
+
         rb = GetComponent<Rigidbody2D>();
         ball = transform.GetChild(0).gameObject;
 
@@ -47,7 +47,6 @@ public class PaddleController : MonoBehaviour
             collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up +  new Vector2(distToCenter, 0).normalized).normalized * ballSpeed, ForceMode2D.Impulse);
         }
     }
-
     public void setSpeed(float ballSpeed)
     {
         this.ballSpeed = ballSpeed;
@@ -56,13 +55,11 @@ public class PaddleController : MonoBehaviour
     {
         return ballSpeed;
     }
-
     /// <summary>
     /// This function is called when the MonoBehaviour will be destroyed.
     /// </summary>
     void OnDestroy()
     {
-        Debug.Log("DestroyedPaddle");
         levelController.lifeCount--;
     }
 }
