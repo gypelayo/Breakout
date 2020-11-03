@@ -828,9 +828,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddle: {fileID: 806838766}
+  ball: {fileID: 3630683301178101014, guid: e9bb9050d1b3c4174a598db3637487aa, type: 3}
   isSpeedBoost: 0
   isPaddleGrower: 0
-  isPaddleShrinker: 1
+  isPaddleShrinker: 0
+  isBallMultipler: 1
 --- !u!212 &1813286627
 SpriteRenderer:
   m_ObjectHideFlags: 0

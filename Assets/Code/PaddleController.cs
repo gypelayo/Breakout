@@ -47,4 +47,8 @@ public class PaddleController : MonoBehaviour
     {
         this.ballSpeed = ballSpeed;
     }
+    public float GetBallSpeed()
+    {
+        return ballSpeed;
+    }
 }
