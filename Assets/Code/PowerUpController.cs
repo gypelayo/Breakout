@@ -64,9 +64,9 @@ public class PowerUpController : MonoBehaviour
             else if (isBallMultipler)
             {
                 levelController.numberOfBalls++;
-                Destroy(gameObject);
                 GameObject instantiatedBall = Instantiate(ball, transform.position, Quaternion.identity, null);
                 instantiatedBall.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.right).normalized * paddle.GetComponent<PaddleController>().GetBallSpeed(), ForceMode2D.Impulse);
+                Destroy(gameObject);
             }
         }
 
