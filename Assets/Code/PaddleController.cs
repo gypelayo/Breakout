@@ -9,12 +9,17 @@ public class PaddleController : MonoBehaviour
 
     [SerializeField]
     private float ballSpeed;
+    private LevelController levelController;
     private GameObject ball;
     void Start()
     {
         ballReleased = false;
+        
         rb = GetComponent<Rigidbody2D>();
         ball = transform.GetChild(0).gameObject;
+
+        levelController = GameObject.FindGameObjectWithTag("LevelController").GetComponent<LevelController>();
+        levelController.numberOfBalls=1;
     }
 
     // Update is called once per frame
@@ -39,7 +44,7 @@ public class PaddleController : MonoBehaviour
         {
             collision.collider.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             float distToCenter = collision.transform.position.x - transform.position.x;
-            collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + 2 * new Vector2(distToCenter, 0).normalized).normalized * ballSpeed, ForceMode2D.Impulse);
+            collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up +  new Vector2(distToCenter, 0).normalized).normalized * ballSpeed, ForceMode2D.Impulse);
         }
     }
 
@@ -50,5 +55,14 @@ public class PaddleController : MonoBehaviour
     public float GetBallSpeed()
     {
         return ballSpeed;
+    }
+
+    /// <summary>
+    /// This function is called when the MonoBehaviour will be destroyed.
+    /// </summary>
+    void OnDestroy()
+    {
+        Debug.Log("DestroyedPaddle");
+        levelController.lifeCount--;
     }
 }

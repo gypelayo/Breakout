@@ -17,12 +17,14 @@ public class PowerUpController : MonoBehaviour
     bool isPaddleShrinker;
     [SerializeField]
     bool isBallMultipler;
+    private LevelController levelController;
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
     /// any of the Update methods is called the first time.
     /// </summary>
     void Start()
     {
+        levelController = GameObject.FindGameObjectWithTag("LevelController").GetComponent<LevelController>();
         if (isPaddleGrower)
         {
             GetComponent<SpriteRenderer>().color = Color.white;
@@ -62,8 +64,9 @@ public class PowerUpController : MonoBehaviour
             if (isBallMultipler)
             {
                 GameObject instantiatedBall = Instantiate(ball, transform.position, Quaternion.identity, null);
-                instantiatedBall.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.right).normalized*paddle.GetComponent<PaddleController>().GetBallSpeed(), ForceMode2D.Impulse);
+                levelController.numberOfBalls++;
                 Destroy(gameObject);
+                instantiatedBall.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.right).normalized * paddle.GetComponent<PaddleController>().GetBallSpeed(), ForceMode2D.Impulse);
             }
         }
 
