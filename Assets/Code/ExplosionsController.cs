@@ -6,8 +6,11 @@ public class ExplosionsController : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        Destroy(other.gameObject);
+        if (other.gameObject.tag == "Brick")
+        {
+            Destroy(other.gameObject);
+        }
     }
-    
-    
+
+
 }
