@@ -8,7 +8,7 @@ public class LevelGenerator : MonoBehaviour
     private GameObject brickPrefab;
     void Start()
     {
-        Cursor.visible=false;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame

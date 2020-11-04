@@ -10,6 +10,7 @@ public class PaddleController : MonoBehaviour
     [SerializeField]
     private float ballSpeed;
     private GameObject ball;
+
     void Start()
     {
         ballReleased = false;
@@ -37,9 +38,14 @@ public class PaddleController : MonoBehaviour
     {
         if (collision.collider.tag == "Ball")
         {
-            collision.collider.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             float distToCenter = collision.transform.position.x - transform.position.x;
-            collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + 2 * new Vector2(distToCenter, 0).normalized).normalized * ballSpeed, ForceMode2D.Impulse);
+
+            Vector2 newDirectionOfMovement;
+            newDirectionOfMovement = (Vector2.up + 2 * new Vector2(distToCenter, 0).normalized).normalized;
+
+            collision.collider.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            //Force is added to the ball with a vector proportional to the distance to the center of the paddle
+            collision.collider.GetComponent<Rigidbody2D>().AddForce(newDirectionOfMovement * ballSpeed, ForceMode2D.Impulse);
         }
     }
 }

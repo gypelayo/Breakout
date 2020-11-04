@@ -16,9 +16,9 @@ public class Death : MonoBehaviour
 
     private void RespawnPaddle(Collision2D collision)
     {
-            Destroy(collision.collider.gameObject);
-            Destroy(transform.parent.GetChild(0).gameObject);
-            GameObject temp = Instantiate(playerPrefab, transform.parent.position, Quaternion.identity, transform.parent);
-            temp.transform.SetAsFirstSibling();
+        Destroy(collision.collider.gameObject);
+        Destroy(transform.parent.GetChild(0).gameObject);
+        GameObject temp = Instantiate(playerPrefab, transform.parent.position, Quaternion.identity, transform.parent);
+        temp.transform.SetAsFirstSibling();
     }
 }
