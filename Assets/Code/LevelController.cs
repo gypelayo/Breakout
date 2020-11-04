@@ -19,12 +19,17 @@ public class LevelController : MonoBehaviour
     {
         numberOfBalls = 1;
         lifeCount = 5;
+        Cursor.visible=false;
     }
     /// <summary>
     /// Update is called every frame, if the MonoBehaviour is enabled.
     /// </summary>
     void Update()
     {
+         if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+        }
         text.text = lifeCount.ToString();
         numberOfActiveBalls.text = numberOfBalls.ToString();
         if (lifeCount < 0)
