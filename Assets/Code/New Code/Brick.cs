@@ -78,10 +78,12 @@ public class Brick
         {
             brickGameObject = value;
             spriteRenderer = brickGameObject.GetComponent<SpriteRenderer>();
-            //Set color
-            spriteRenderer.color = color;
             //SetSize
-            brickGameObject.transform.localScale = new Vector3(size, 1, 1);
+            size = brickGameObject.transform.localScale.x;
+            //SetPosition
+            position = brickGameObject.transform.position;
+            //setColor
+            color = spriteRenderer.color;
         }
     }
     public SpriteRenderer GetSpriteRenderer()

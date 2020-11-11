@@ -85,7 +85,7 @@ namespace Tests
         {
             Brick brick = new Brick(Color.red);
             brick.BrickGameObject = CreateGameObjectWithSpriteRenderer();
-            Assert.AreEqual(Color.red, brick.BrickGameObject.GetComponent<SpriteRenderer>().color);
+            Assert.AreEqual(brick.Color, brick.BrickGameObject.GetComponent<SpriteRenderer>().color);
         }
         [Test]
         public void _C_Can_Change_Brick_Color_And_SpriteRenderer()

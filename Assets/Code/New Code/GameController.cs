@@ -5,21 +5,25 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
 
-    public List<GameObject> gameObjects;
+    public List<GameObject> realBricks;
     private List<Brick> bricks;
-    private Brick brick1;
     [SerializeField]
     private GameObject brickDefault;
     private void Start()
     {
-        brick1 = new Brick();
         bricks = new List<Brick>();
-        bricks.Add(brick1);
+        foreach (GameObject realBrick in realBricks)
+        {
+            Brick newBrick = new Brick();
+            newBrick.BrickGameObject = realBrick;
+            bricks.Add(newBrick);
+        }
+        /*
         foreach (Brick brick in bricks)
         {
             GameObject brickGameObject = Instantiate(brickDefault, transform.position, Quaternion.identity, null);
             brick.BrickGameObject = brickGameObject;
             gameObjects.Add(brickGameObject);
-        }
+        }*/
     }
 }
