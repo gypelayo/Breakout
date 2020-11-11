@@ -66,5 +66,26 @@ namespace Tests
             brick.Position = new Vector2(2,0);
             Assert.AreEqual(new Vector2(2, 0), brick.Position);
         }
+        [Test]
+        public void _9_Brick_Has_Gameobject_Associated()
+        {
+            Brick brick = new Brick();
+            brick.BrickGameObject = new GameObject();
+            Assert.AreNotEqual(null, brick.BrickGameObject);
+        }
+        [Test]
+        public void _A_BrickGameobject_Has_SpriteRenderer()
+        {
+            Brick brick = new Brick();
+            brick.BrickGameObject = new GameObject();
+            Assert.AreNotEqual(null, brick.BrickGameObject.GetComponent<SpriteRenderer>());
+        }
+        [Test]
+        public void _B_BrickGameObject_SpriteRenderer_Is_Of_Brick_Color()
+        {
+            Brick brick = new Brick(Color.red);
+            brick.BrickGameObject = new GameObject();
+            Assert.AreEqual(Color.red, brick.BrickGameObject.GetComponent<SpriteRenderer>().color);
+        }
     }
 }

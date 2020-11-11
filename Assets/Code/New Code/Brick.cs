@@ -7,6 +7,8 @@ public class Brick
     private float size;
     private Color color;
     private Vector2 position;
+    private GameObject brickGameObject;
+    private SpriteRenderer spriteRenderer;
     public Brick()
     {
         this.size = 2;
@@ -62,6 +64,19 @@ public class Brick
         set
         {
             position = value;
+        }
+    }
+    public GameObject BrickGameObject
+    {
+        get
+        {
+            return brickGameObject;
+        }
+        set
+        {
+            brickGameObject = value;
+            spriteRenderer = brickGameObject.AddComponent<SpriteRenderer>();
+            spriteRenderer.color = color;
         }
     }
 }
