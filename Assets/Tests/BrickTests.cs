@@ -70,28 +70,28 @@ namespace Tests
         public void _9_Brick_Has_Gameobject_Associated()
         {
             Brick brick = new Brick();
-            brick.BrickGameObject = new GameObject();
+            brick.BrickGameObject = CreateGameObjectWithSpriteRenderer();
             Assert.AreNotEqual(null, brick.BrickGameObject);
         }
         [Test]
         public void _A_BrickGameobject_Has_SpriteRenderer()
         {
             Brick brick = new Brick();
-            brick.BrickGameObject = new GameObject();
+            brick.BrickGameObject = CreateGameObjectWithSpriteRenderer();
             Assert.AreNotEqual(null, brick.BrickGameObject.GetComponent<SpriteRenderer>());
         }
         [Test]
         public void _B_BrickGameObject_SpriteRenderer_Is_Of_Brick_Color()
         {
             Brick brick = new Brick(Color.red);
-            brick.BrickGameObject = new GameObject();
+            brick.BrickGameObject = CreateGameObjectWithSpriteRenderer();
             Assert.AreEqual(Color.red, brick.BrickGameObject.GetComponent<SpriteRenderer>().color);
         }
         [Test]
         public void _C_Can_Change_Brick_Color_And_SpriteRenderer()
         {
             Brick brick = new Brick(Color.red);
-            brick.BrickGameObject = new GameObject();
+            brick.BrickGameObject = CreateGameObjectWithSpriteRenderer();
             brick.SetColor(Color.green);
             Assert.AreEqual(Color.green, brick.Color);
             Assert.AreEqual(Color.green, brick.GetSpriteRenderer().color);
@@ -100,8 +100,14 @@ namespace Tests
         public void _D_BrickGameObject_Is_Of_Brick_Size()
         {
             Brick brick = new Brick(Color.red);
-            brick.BrickGameObject = new GameObject();
+            brick.BrickGameObject = CreateGameObjectWithSpriteRenderer();
             Assert.AreEqual(brick.BrickGameObject.transform.localScale.x, brick.Size);
+        }
+        public GameObject CreateGameObjectWithSpriteRenderer()
+        {
+            GameObject gameObject = new GameObject();
+            gameObject.AddComponent<SpriteRenderer>();
+            return gameObject;
         }
     }
 }
