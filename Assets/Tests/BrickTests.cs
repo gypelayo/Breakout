@@ -20,5 +20,17 @@ namespace Tests
             Brick brick = new Brick(3);
             Assert.AreEqual(3, brick.Size);
         }
+        [Test]
+        public void _2_New_Brick_Default_Color_Is_Grey()
+        {
+            Brick brick = new Brick();
+            Assert.AreEqual(Color.grey, brick.Color);
+        }
+        [Test]
+        public void _3_Creating_New_Brick_With_Color_Red_Sets_It_Red()
+        {
+            Brick brick = new Brick(Color.red);
+            Assert.AreEqual(Color.red, brick.Color);
+        }
     }
 }
