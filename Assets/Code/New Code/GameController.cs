@@ -18,7 +18,7 @@ public class GameController : MonoBehaviour
         foreach (Brick brick in bricks)
         {
             GameObject brickGameObject = Instantiate(brickDefault, transform.position, Quaternion.identity, null);
-            brickGameObject.transform.localScale = new Vector2(brick.Size,1);
+            brick.BrickGameObject = brickGameObject;
             gameObjects.Add(brickGameObject);
         }
     }
