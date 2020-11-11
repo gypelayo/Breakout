@@ -6,6 +6,7 @@ public class Brick
 {
     private float size;
     private Color color;
+    private Vector2 position;
     public Brick()
     {
         this.size = 2;
@@ -15,6 +16,7 @@ public class Brick
     {
         this.size = size;
         this.color = Color.grey;
+        this.position = new Vector2(0, 0);
     }
     public Brick(Color color)
     {
@@ -49,6 +51,17 @@ public class Brick
         {
 
             color = value;
+        }
+    }
+    public Vector2 Position
+    {
+        get
+        {
+            return position;
+        }
+        set
+        {
+            position = value;
         }
     }
 }

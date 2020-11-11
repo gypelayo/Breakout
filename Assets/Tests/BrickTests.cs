@@ -53,5 +53,18 @@ namespace Tests
             brick.Size = 3;
             Assert.AreEqual(3, brick.Size);
         }
+        [Test]
+        public void _7_Default_Brick_Position_Is_X0_Y0()
+        {
+            Brick brick = new Brick();
+            Assert.AreEqual(new Vector2(0, 0), brick.Position);
+        }
+        [Test]
+        public void _8_Setting_Brick_Position_Changes_Position()
+        {
+            Brick brick = new Brick();
+            brick.Position = new Vector2(2,0);
+            Assert.AreEqual(new Vector2(2, 0), brick.Position);
+        }
     }
 }
