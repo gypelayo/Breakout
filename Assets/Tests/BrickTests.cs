@@ -87,5 +87,21 @@ namespace Tests
             brick.BrickGameObject = new GameObject();
             Assert.AreEqual(Color.red, brick.BrickGameObject.GetComponent<SpriteRenderer>().color);
         }
+        [Test]
+        public void _C_Can_Change_Brick_Color_And_SpriteRenderer()
+        {
+            Brick brick = new Brick(Color.red);
+            brick.BrickGameObject = new GameObject();
+            brick.SetColor(Color.green);
+            Assert.AreEqual(Color.green, brick.Color);
+            Assert.AreEqual(Color.green, brick.GetSpriteRenderer().color);
+        }
+        [Test]
+        public void _D_BrickGameObject_Is_Of_Brick_Size()
+        {
+            Brick brick = new Brick(Color.red);
+            brick.BrickGameObject = new GameObject();
+            Assert.AreEqual(brick.BrickGameObject.transform.localScale.x, brick.Size);
+        }
     }
 }

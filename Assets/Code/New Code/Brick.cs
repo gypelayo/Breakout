@@ -75,8 +75,21 @@ public class Brick
         set
         {
             brickGameObject = value;
+            //Set spriteRenderer
             spriteRenderer = brickGameObject.AddComponent<SpriteRenderer>();
+            //Set Color
             spriteRenderer.color = color;
+            //SetSize
+            brickGameObject.transform.localScale = new Vector3(size,1,1);
         }
+    }
+    public SpriteRenderer GetSpriteRenderer()
+    {
+        return spriteRenderer;
+    }
+    public void SetColor(Color color)
+    {
+        this.color=color;
+        spriteRenderer.color = color;
     }
 }
