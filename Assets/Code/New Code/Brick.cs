@@ -21,15 +21,21 @@ public class Brick
         this.size = 2;
         this.color = color;
     }
+    public Brick(float size, Color color)
+    {
+        this.size = size;
+        this.color = color;
+    }
     public float Size
     {
         get
         {
             return size;
         }
-        private set
+        set
         {
 
+            size = value;
         }
     }
 
@@ -42,6 +48,7 @@ public class Brick
         set
         {
 
+            color = value;
         }
     }
 }
