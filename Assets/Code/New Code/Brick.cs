@@ -24,11 +24,13 @@ public class Brick
     {
         this.size = 2;
         this.color = color;
+        this.position = new Vector2(0, 0);
     }
     public Brick(float size, Color color)
     {
         this.size = size;
         this.color = color;
+        this.position = new Vector2(0, 0);
     }
     public float Size
     {
@@ -75,12 +77,11 @@ public class Brick
         set
         {
             brickGameObject = value;
-            //Set spriteRenderer
-            spriteRenderer = brickGameObject.AddComponent<SpriteRenderer>();
-            //Set Color
+            spriteRenderer = brickGameObject.GetComponent<SpriteRenderer>();
+            //Set color
             spriteRenderer.color = color;
             //SetSize
-            brickGameObject.transform.localScale = new Vector3(size,1,1);
+            brickGameObject.transform.localScale = new Vector3(size, 1, 1);
         }
     }
     public SpriteRenderer GetSpriteRenderer()
@@ -89,7 +90,7 @@ public class Brick
     }
     public void SetColor(Color color)
     {
-        this.color=color;
+        this.color = color;
         spriteRenderer.color = color;
     }
 }

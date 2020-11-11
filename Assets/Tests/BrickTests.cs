@@ -63,7 +63,7 @@ namespace Tests
         public void _8_Setting_Brick_Position_Changes_Position()
         {
             Brick brick = new Brick();
-            brick.Position = new Vector2(2,0);
+            brick.Position = new Vector2(2, 0);
             Assert.AreEqual(new Vector2(2, 0), brick.Position);
         }
         [Test]
