@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour
     public List<Paddle> paddles;
     public int numberOfPaddlesLeft;
     public int numberOfBricks = 0;
+    [SerializeField]
+    private GameObject paddlePrefab;
     private void Awake()
     {
         numberOfPaddlesLeft = 5;
@@ -24,5 +26,7 @@ public class GameController : MonoBehaviour
             }
         }
 
+        GameObject firstPaddle = Instantiate(paddlePrefab, paddles[numberOfPaddlesLeft-1].Position,Quaternion.identity,transform);
+        firstPaddle.GetComponent<SpriteRenderer>().color = paddles[numberOfPaddlesLeft-1].Color;
     }
 }
