@@ -12,10 +12,15 @@ public class Paddle
     {
         horizontalSize = 2;
         verticalSize = 0.5f;
+        position = new Vector2(0,-8.75f);
+        color = Color.grey;
     }
     public Paddle(float horizontalSize)
     {
         this.horizontalSize = horizontalSize;
+        verticalSize = 0.5f;
+        position = new Vector2(0,-8.75f);
+        color = Color.grey;
     }
     public float HorizontalSize
     {

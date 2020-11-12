@@ -31,5 +31,11 @@ namespace Tests
             paddle.Position = new Vector2(2,3);
             Assert.AreEqual(new Vector2(2,3), paddle.Position);
         }
+        [Test]
+        public void _4_Creating_Paddle_At_Default_Position()
+        {
+            Paddle paddle = new Paddle();
+            Assert.AreEqual(new Vector2(0,-8.75f), (Vector2)paddle.Position);
+        }
     }
 }
