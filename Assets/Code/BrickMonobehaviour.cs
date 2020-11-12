@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BrickMonobehaviour : MonoBehaviour
 {
+    private Brick brick;
     private GameController gameController;
     private void Start()
     {
@@ -13,10 +14,20 @@ public class BrickMonobehaviour : MonoBehaviour
 
     private void BrickSetup()
     {
-        Brick newBrick = new Brick();
-        newBrick.BrickGameObject = gameObject;
-        gameController.bricks.Add(newBrick);
+        brick = new Brick();
+        brick.BrickGameObject = gameObject;
+        gameController.bricks.Add(brick);
         gameController.numberOfBricks++;
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.collider.tag == "Ball")
+        {
+            gameController.bricks.Remove(brick);
+            Destroy(gameObject);
+        }
+    }
+
 }
 

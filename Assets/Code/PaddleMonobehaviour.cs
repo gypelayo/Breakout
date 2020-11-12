@@ -11,19 +11,22 @@ public class PaddleMonobehaviour : MonoBehaviour
     private Vector3 mousePosition;
     private Rigidbody2D rb;
     private Vector2 position;
+    private bool hasBall;
+    private GameObject ballObject;
     private void Start()
     {
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         paddle = gameController.paddles[gameController.paddles.Count - 1];
-
-        //Init mouse variables
-        moveSpeed = 0.1f;
-        rb = GetComponent<Rigidbody2D>();
-        position = transform.position;
+        VariableInit();
     }
     private void Update()
     {
         MouseMovement();
+        if (hasBall && Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            hasBall = false;
+            ShootBall();
+        }
     }
     private void FixedUpdate()
     {
@@ -35,6 +38,14 @@ public class PaddleMonobehaviour : MonoBehaviour
         gameController.paddles.Remove(paddle);
     }
 
+    private void VariableInit()
+    {
+        moveSpeed = 1f;
+        rb = GetComponent<Rigidbody2D>();
+        position = transform.position;
+        hasBall = true;
+        ballObject = transform.GetChild(0).gameObject;
+    }
     private void MouseMovement()
     {
         mousePosition = Input.mousePosition;
@@ -42,5 +53,13 @@ public class PaddleMonobehaviour : MonoBehaviour
         position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
         position = new Vector2(position.x, paddle.Position.y);
         paddle.Position = position;
+    }
+    private void ShootBall()
+    {
+        ballObject.transform.parent = null;
+        ballObject.AddComponent<Rigidbody2D>();
+        ballObject.GetComponent<Rigidbody2D>().gravityScale = 0;
+        ballObject.GetComponent<Rigidbody2D>().drag = 0;
+        ballObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10, ForceMode2D.Impulse);
     }
 }
