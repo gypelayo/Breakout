@@ -23,10 +23,7 @@ public class PaddleMonobehaviour : MonoBehaviour
     }
     private void Update()
     {
-        mousePosition = Input.mousePosition;
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-        position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
-        position = new Vector2(position.x, paddle.Position.y);
+        MouseMovement();
     }
     private void FixedUpdate()
     {
@@ -36,5 +33,14 @@ public class PaddleMonobehaviour : MonoBehaviour
     {
         gameController.paddles[gameController.paddles.Count - 2].IsActive = true;
         gameController.paddles.Remove(paddle);
+    }
+
+    private void MouseMovement()
+    {
+        mousePosition = Input.mousePosition;
+        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        position = Vector2.Lerp(transform.position, mousePosition, moveSpeed);
+        position = new Vector2(position.x, paddle.Position.y);
+        paddle.Position = position;
     }
 }

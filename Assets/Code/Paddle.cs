@@ -49,7 +49,6 @@ public class Paddle
         }
         set
         {
-
             position = value;
         }
     }
@@ -62,11 +61,7 @@ public class Paddle
         }
         set
         {
-
+            color = value;
         }
-    }
-    public void SetColor(Color color)
-    {
-        this.color = color;
     }
 }

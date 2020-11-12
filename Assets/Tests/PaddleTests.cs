@@ -21,7 +21,7 @@ namespace Tests
         public void _2_Paddle_Sets_Color()
         {
             Paddle paddle = new Paddle();
-            paddle.SetColor(Color.green);
+            paddle.Color = Color.green;
             Assert.AreEqual(Color.green, paddle.Color);
         }
         [Test]

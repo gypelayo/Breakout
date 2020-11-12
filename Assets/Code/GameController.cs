@@ -25,8 +25,11 @@ public class GameController : MonoBehaviour
                 paddle.IsActive = true;
             }
         }
-
-        GameObject firstPaddle = Instantiate(paddlePrefab, paddles[numberOfPaddlesLeft-1].Position,Quaternion.identity,transform);
-        firstPaddle.GetComponent<SpriteRenderer>().color = paddles[numberOfPaddlesLeft-1].Color;
+        SpawnNewPaddle();
+    }
+    public void SpawnNewPaddle()
+    {
+        GameObject firstPaddle = Instantiate(paddlePrefab, paddles[numberOfPaddlesLeft - 1].Position, Quaternion.identity, transform);
+        firstPaddle.GetComponent<SpriteRenderer>().color = paddles[numberOfPaddlesLeft - 1].Color;
     }
 }
