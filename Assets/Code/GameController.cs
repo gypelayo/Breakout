@@ -18,12 +18,5 @@ public class GameController : MonoBehaviour
             newBrick.BrickGameObject = realBrick;
             bricks.Add(newBrick);
         }
-        /*
-        foreach (Brick brick in bricks)
-        {
-            GameObject brickGameObject = Instantiate(brickDefault, transform.position, Quaternion.identity, null);
-            brick.BrickGameObject = brickGameObject;
-            gameObjects.Add(brickGameObject);
-        }*/
     }
 }

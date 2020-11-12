@@ -130,6 +130,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 979569575}
     m_Modifications:
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
       propertyPath: m_Name
       value: BrickDefault (6)
@@ -196,6 +208,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 979569575}
     m_Modifications:
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
       propertyPath: m_Name
       value: BrickDefault (5)
@@ -262,6 +286,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 979569575}
     m_Modifications:
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
       propertyPath: m_Name
       value: BrickDefault (4)
@@ -321,6 +357,21 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7912371506324627159, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
   m_PrefabInstance: {fileID: 382789664}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &496466840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+  m_PrefabInstance: {fileID: 654990577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &502218928 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+  m_PrefabInstance: {fileID: 207425009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &572777597 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+  m_PrefabInstance: {fileID: 1939785164}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &575687656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -328,6 +379,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 979569575}
     m_Modifications:
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
       propertyPath: m_Name
       value: BrickDefault (3)
@@ -394,6 +457,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 979569575}
     m_Modifications:
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
       propertyPath: m_Name
       value: BrickDefault (8)
@@ -460,6 +535,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 979569575}
     m_Modifications:
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
       propertyPath: m_Name
       value: BrickDefault (7)
@@ -519,6 +606,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7912371506324627159, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
   m_PrefabInstance: {fileID: 654990577}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &754046125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+  m_PrefabInstance: {fileID: 575687656}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &780910685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -526,6 +618,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 979569575}
     m_Modifications:
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
       propertyPath: m_Name
       value: BrickDefault (1)
@@ -584,6 +688,16 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7912371506324627159, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
   m_PrefabInstance: {fileID: 780910685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &827609581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+  m_PrefabInstance: {fileID: 268849018}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &860838573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+  m_PrefabInstance: {fileID: 609205176}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &875080940
 GameObject:
@@ -697,7 +811,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92bca4ef891847ddafca20ad0e19c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  realBricks: []
+  realBricks:
+  - {fileID: 2038333955}
+  - {fileID: 1989568123}
+  - {fileID: 572777597}
+  - {fileID: 754046125}
+  - {fileID: 1707304564}
+  - {fileID: 827609581}
+  - {fileID: 502218928}
+  - {fileID: 496466840}
+  - {fileID: 860838573}
   brickDefault: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
 --- !u!4 &979569575
 Transform:
@@ -729,6 +852,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 979569575}
     m_Modifications:
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
       propertyPath: m_Name
       value: BrickDefault
@@ -788,6 +923,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7912371506324627159, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
   m_PrefabInstance: {fileID: 1018549146}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1707304564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+  m_PrefabInstance: {fileID: 382789664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1939785164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -795,6 +935,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 979569575}
     m_Modifications:
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435378783822655558, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
       propertyPath: m_Name
       value: BrickDefault (2)
@@ -853,4 +1005,14 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7912371506324627159, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
   m_PrefabInstance: {fileID: 1939785164}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1989568123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+  m_PrefabInstance: {fileID: 780910685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2038333955 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4379417308307600229, guid: f32217aeecd60458fad4c1254a42db58, type: 3}
+  m_PrefabInstance: {fileID: 1018549146}
   m_PrefabAsset: {fileID: 0}
