@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ball
   - LevelController
+  - Brick
   layers:
   - Default
   - TransparentFX

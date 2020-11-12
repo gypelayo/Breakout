@@ -132,7 +132,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 12468129}
-  - component: {fileID: 12468130}
   - component: {fileID: 12468131}
   m_Layer: 0
   m_Name: Level Controller
@@ -155,19 +154,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &12468130
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 12468128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 078e70a58d02d48c0881460933bbbca5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  brickPrefab: {fileID: 90227386920605401, guid: 7234800377b1746e1a22defb5459102b, type: 3}
 --- !u!114 &12468131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -275,7 +261,7 @@ Transform:
   - {fileID: 1347450324}
   - {fileID: 644874102}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &596270995
 GameObject:
@@ -1281,7 +1267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11641585197156348, guid: 8af2a8855308a4936b49145c2cc7f776, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11641585197156348, guid: 8af2a8855308a4936b49145c2cc7f776, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1298,6 +1284,10 @@ PrefabInstance:
     - target: {fileID: 11641585197156351, guid: 8af2a8855308a4936b49145c2cc7f776, type: 3}
       propertyPath: m_Name
       value: Level 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8473547867386596351, guid: 8af2a8855308a4936b49145c2cc7f776, type: 3}
+      propertyPath: isExplosive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8af2a8855308a4936b49145c2cc7f776, type: 3}

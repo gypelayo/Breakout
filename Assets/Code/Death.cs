@@ -31,7 +31,5 @@ public class Death : MonoBehaviour
         Destroy(transform.parent.GetChild(0).gameObject);
         GameObject temp = Instantiate(playerPrefab, transform.parent.position, Quaternion.identity, transform.parent);
         temp.transform.SetAsFirstSibling();
-
-
     }
 }

@@ -29,15 +29,15 @@ public class PowerUpController : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().color = Color.white;
         }
-        if (isSpeedBoost)
+        else if (isSpeedBoost)
         {
             GetComponent<SpriteRenderer>().color = Color.cyan;
         }
-        if (isPaddleShrinker)
+        else if (isPaddleShrinker)
         {
             GetComponent<SpriteRenderer>().color = Color.blue;
         }
-        if (isBallMultipler)
+        else if (isBallMultipler)
         {
             GetComponent<SpriteRenderer>().color = Color.green;
         }
@@ -51,22 +51,22 @@ public class PowerUpController : MonoBehaviour
                 paddle.GetComponent<PaddleController>().setSpeed(15);
                 Destroy(gameObject);
             }
-            if (isPaddleGrower)
+            else if (isPaddleGrower)
             {
                 paddle.transform.localScale = new Vector3(paddle.transform.localScale.x * 1.5f, paddle.transform.localScale.y);
                 Destroy(gameObject);
             }
-            if (isPaddleShrinker)
+            else if (isPaddleShrinker)
             {
                 paddle.transform.localScale = new Vector3(paddle.transform.localScale.x / 1.5f, paddle.transform.localScale.y);
                 Destroy(gameObject);
             }
-            if (isBallMultipler)
+            else if (isBallMultipler)
             {
-                GameObject instantiatedBall = Instantiate(ball, transform.position, Quaternion.identity, null);
                 levelController.numberOfBalls++;
-                Destroy(gameObject);
+                GameObject instantiatedBall = Instantiate(ball, transform.position, Quaternion.identity, null);
                 instantiatedBall.GetComponent<Rigidbody2D>().AddForce((Vector2.up + Vector2.right).normalized * paddle.GetComponent<PaddleController>().GetBallSpeed(), ForceMode2D.Impulse);
+                Destroy(gameObject);
             }
         }
 

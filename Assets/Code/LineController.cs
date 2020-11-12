@@ -9,9 +9,13 @@ public class LineController : MonoBehaviour
 
     void Start()
     {
-        for(int childIndex=0;childIndex<transform.childCount;childIndex++)
+        for (int childIndex = 0; childIndex < transform.childCount; childIndex++)
         {
-            transform.GetChild(childIndex).GetComponent<SpriteRenderer>().color=lineColor;
+            if (!transform.GetChild(childIndex).GetComponent<BrickScript>().isExplosive)
+            {
+                transform.GetChild(childIndex).GetComponent<SpriteRenderer>().color = lineColor;
+            }
+
         }
     }
 }
