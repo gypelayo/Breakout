@@ -8,6 +8,11 @@ public class BrickMonobehaviour : MonoBehaviour
     private void Start()
     {
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
+        BrickSetup();
+    }
+
+    private void BrickSetup()
+    {
         Brick newBrick = new Brick();
         newBrick.BrickGameObject = gameObject;
         gameController.bricks.Add(newBrick);
