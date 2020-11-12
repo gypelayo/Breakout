@@ -13,6 +13,7 @@ public class Brick
     {
         this.size = 2;
         this.color = Color.grey;
+        this.position = new Vector2(0, 0);
     }
     public Brick(float size)
     {

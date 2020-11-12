@@ -7,6 +7,7 @@ public class Paddle
     private float horizontalSize;
     private float verticalSize;
     private Color color;
+    private Vector2 position;
     public Paddle()
     {
         horizontalSize = 2;
@@ -22,11 +23,20 @@ public class Paddle
         {
             return horizontalSize;
         }
+    }
+    public Vector2 Position
+    {
+        get
+        {
+            return position;
+        }
         set
         {
 
+            position = value;
         }
     }
+
     public Color Color
     {
         get
@@ -37,5 +47,9 @@ public class Paddle
         {
 
         }
+    }
+    public void SetColor(Color color)
+    {
+        this.color = color;
     }
 }
