@@ -28,14 +28,27 @@ namespace Tests
         public void _3_Paddle_Sets_Position()
         {
             Paddle paddle = new Paddle();
-            paddle.Position = new Vector2(2,3);
-            Assert.AreEqual(new Vector2(2,3), paddle.Position);
+            paddle.Position = new Vector2(2, 3);
+            Assert.AreEqual(new Vector2(2, 3), paddle.Position);
         }
         [Test]
         public void _4_Creating_Paddle_At_Default_Position()
         {
             Paddle paddle = new Paddle();
-            Assert.AreEqual(new Vector2(0,-8.75f), (Vector2)paddle.Position);
+            Assert.AreEqual(new Vector2(0, -8.75f), (Vector2)paddle.Position);
+        }
+        [Test]
+        public void _5_New_Paddle_Is_Not_Active()
+        {
+            Paddle paddle = new Paddle();
+            Assert.AreEqual(false, paddle.IsActive);
+        }
+        [Test]
+        public void _6_Can_Set_Paddle_Active()
+        {
+            Paddle paddle = new Paddle();
+            paddle.IsActive=true;
+            Assert.AreEqual(true, paddle.IsActive);
         }
     }
 }

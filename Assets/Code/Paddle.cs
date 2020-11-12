@@ -8,18 +8,19 @@ public class Paddle
     private float verticalSize;
     private Color color;
     private Vector2 position;
+    private bool isActive;
     public Paddle()
     {
         horizontalSize = 2;
         verticalSize = 0.5f;
-        position = new Vector2(0,-8.75f);
+        position = new Vector2(0, -8.75f);
         color = Color.grey;
     }
     public Paddle(float horizontalSize)
     {
         this.horizontalSize = horizontalSize;
         verticalSize = 0.5f;
-        position = new Vector2(0,-8.75f);
+        position = new Vector2(0, -8.75f);
         color = Color.grey;
     }
     public float HorizontalSize
@@ -27,6 +28,17 @@ public class Paddle
         get
         {
             return horizontalSize;
+        }
+    }
+    public bool IsActive
+    {
+        get
+        {
+            return isActive;
+        }
+        set
+        {
+            isActive = value;
         }
     }
     public Vector2 Position
