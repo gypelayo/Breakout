@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
@@ -103,10 +104,30 @@ namespace Tests
             brick.BrickGameObject = CreateGameObjectWithSpriteRenderer();
             Assert.AreEqual(brick.BrickGameObject.transform.localScale.x, brick.Size);
         }
+        [Test]
+        public void _E_Brick_Position_Is_Gameobject_Position()
+        {
+            Brick brick = new Brick(Color.red);
+            brick.BrickGameObject = CreateGameObjectWithSpriteRenderer(new Vector2(2, 3));
+            Assert.AreEqual((Vector2)brick.BrickGameObject.transform.position, new Vector2(2, 3));
+        }
+        [Test]
+        public void _F_Passing_Gameobject_Without_SpriteRenderer_Throws_Exception()
+        {
+            Brick brick = new Brick(Color.red);
+            Assert.Throws<NullReferenceException>(() => brick.BrickGameObject = new GameObject());
+        }
         public GameObject CreateGameObjectWithSpriteRenderer()
         {
             GameObject gameObject = new GameObject();
             gameObject.AddComponent<SpriteRenderer>();
+            return gameObject;
+        }
+        public GameObject CreateGameObjectWithSpriteRenderer(Vector2 position)
+        {
+            GameObject gameObject = new GameObject();
+            gameObject.AddComponent<SpriteRenderer>();
+            gameObject.transform.position = position;
             return gameObject;
         }
     }

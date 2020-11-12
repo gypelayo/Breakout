@@ -76,14 +76,22 @@ public class Brick
         }
         set
         {
-            brickGameObject = value;
-            spriteRenderer = brickGameObject.GetComponent<SpriteRenderer>();
-            //SetSize
-            size = brickGameObject.transform.localScale.x;
-            //SetPosition
-            position = brickGameObject.transform.position;
-            //setColor
-            color = spriteRenderer.color;
+            if (value.GetComponent<SpriteRenderer>() == null)
+            {
+                throw new System.NullReferenceException("Passed GameObject is missing a SpriteRenderer");
+            }
+            else
+            {
+                brickGameObject = value;
+                spriteRenderer = brickGameObject.GetComponent<SpriteRenderer>();
+                //SetSize
+                size = brickGameObject.transform.localScale.x;
+                //SetPosition
+                position = brickGameObject.transform.position;
+                //setColor
+                color = spriteRenderer.color;
+            }
+
         }
     }
     public SpriteRenderer GetSpriteRenderer()
