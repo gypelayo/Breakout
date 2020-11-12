@@ -37,6 +37,13 @@ public class PaddleMonobehaviour : MonoBehaviour
         gameController.paddles[gameController.paddles.Count - 2].IsActive = true;
         gameController.paddles.Remove(paddle);
     }
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.collider.tag == "Ball")
+        {
+
+        }
+    }
 
     private void VariableInit()
     {
