@@ -12,6 +12,10 @@ public class LoosePaddleMonobehaviour : MonoBehaviour
             {
                 DestroyPaddleAndSpawnNew(other);
             }
+            else
+            {
+                Destroy(other.gameObject);
+            }
         }
     }
 
