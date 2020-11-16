@@ -35,6 +35,8 @@ public class BrickMonobehaviour : MonoBehaviour
                 GameObject powerup = Instantiate(powerupPrefab,transform.position,Quaternion.identity,null);
                 powerup.GetComponent<PowerupMonobehaviour>().powerupId=powerupId;
             }
+            gameController.bricks.Remove(brick);
+            gameController.numberOfBricks--;
             Destroy(gameObject);
         }
     }
