@@ -8,7 +8,10 @@ public class LoosePaddleMonobehaviour : MonoBehaviour
     {
         if (other.tag == "Ball")
         {
-            DestroyPaddleAndSpawnNew(other);
+            if (GameObject.FindGameObjectsWithTag("Ball").Length == 1)
+            {
+                DestroyPaddleAndSpawnNew(other);
+            }
         }
     }
 

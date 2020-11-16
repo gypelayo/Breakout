@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4 (9)
@@ -521,6 +525,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4 (11)
@@ -639,6 +647,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4 (5)
@@ -762,6 +774,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4 (2)
@@ -1057,6 +1073,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4 (14)
@@ -1114,6 +1134,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4 (1)
@@ -1232,6 +1256,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4 (4)
@@ -1403,6 +1431,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4 (13)
@@ -2715,6 +2747,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4 (10)
@@ -2842,6 +2878,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4
@@ -3488,6 +3528,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4 (8)
@@ -3545,6 +3589,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4 (6)
@@ -3602,6 +3650,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4 (3)
@@ -3659,6 +3711,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4 (7)
@@ -3716,6 +3772,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 878488135}
     m_Modifications:
+    - target: {fileID: 1429789160788153003, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
+      propertyPath: powerupId
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3391616772660769269, guid: 4f2cf8dc5eafc4ffd82a018a789558ee, type: 3}
       propertyPath: m_Name
       value: Line4 (12)
