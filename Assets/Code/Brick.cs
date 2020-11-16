@@ -9,29 +9,34 @@ public class Brick
     private Vector2 position;
     private GameObject brickGameObject;
     private SpriteRenderer spriteRenderer;
+    private Powerup powerup;
     public Brick()
     {
         this.size = 2;
         this.color = Color.grey;
         this.position = new Vector2(0, 0);
+        powerup = null;
     }
     public Brick(float size)
     {
         this.size = size;
         this.color = Color.grey;
         this.position = new Vector2(0, 0);
+        powerup = null;
     }
     public Brick(Color color)
     {
         this.size = 2;
         this.color = color;
         this.position = new Vector2(0, 0);
+        powerup = null;
     }
     public Brick(float size, Color color)
     {
         this.size = size;
         this.color = color;
         this.position = new Vector2(0, 0);
+        powerup = null;
     }
     public float Size
     {
@@ -93,6 +98,17 @@ public class Brick
                 color = spriteRenderer.color;
             }
 
+        }
+    }
+    public Powerup Powerup
+    {
+        get
+        {
+            return powerup;
+        }
+        set
+        {
+            powerup = value;
         }
     }
     public SpriteRenderer GetSpriteRenderer()
