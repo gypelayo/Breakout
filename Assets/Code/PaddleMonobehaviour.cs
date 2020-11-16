@@ -39,10 +39,7 @@ public class PaddleMonobehaviour : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.collider.tag == "Ball")
-        {
-
-        }
+        ReflectBall(other);
     }
 
     private void VariableInit()
@@ -68,5 +65,15 @@ public class PaddleMonobehaviour : MonoBehaviour
         ballObject.GetComponent<Rigidbody2D>().gravityScale = 0;
         ballObject.GetComponent<Rigidbody2D>().drag = 0;
         ballObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10, ForceMode2D.Impulse);
+    }
+
+    private void ReflectBall(Collision2D collision)
+    {
+        if (collision.collider.tag == "Ball")
+        {
+            collision.collider.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+            float distToCenter = collision.transform.position.x - transform.position.x;
+            collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + new Vector2(distToCenter, 0).normalized).normalized * 10, ForceMode2D.Impulse);
+        }
     }
 }
