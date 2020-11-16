@@ -26,6 +26,7 @@ public class GameController : MonoBehaviour
             }
         }
         SpawnNewPaddle();
+        Cursor.visible=false;
     }
     public void SpawnNewPaddle()
     {
