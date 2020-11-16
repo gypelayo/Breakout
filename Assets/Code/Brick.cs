@@ -15,28 +15,28 @@ public class Brick
         this.size = 2;
         this.color = Color.grey;
         this.position = new Vector2(0, 0);
-        powerup = null;
+        powerup = new Powerup();
     }
     public Brick(float size)
     {
         this.size = size;
         this.color = Color.grey;
         this.position = new Vector2(0, 0);
-        powerup = null;
+        powerup = new Powerup();
     }
     public Brick(Color color)
     {
         this.size = 2;
         this.color = color;
         this.position = new Vector2(0, 0);
-        powerup = null;
+        powerup = new Powerup();
     }
     public Brick(float size, Color color)
     {
         this.size = size;
         this.color = color;
         this.position = new Vector2(0, 0);
-        powerup = null;
+        powerup = new Powerup();
     }
     public float Size
     {

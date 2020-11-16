@@ -118,20 +118,16 @@ namespace Tests
             Assert.Throws<NullReferenceException>(() => brick.BrickGameObject = new GameObject());
         }
         [Test]
-        public void _G_Default_Brick_Has_Null_Powerup()
+        public void _G_Default_Brick_Has_0_Powerup()
         {
             Brick brick = new Brick();
-            Assert.AreEqual(null, brick.Powerup);
+            Assert.AreEqual(0, brick.Powerup.Id);
         }
         [Test]
         public void _H_Brick_Powerup_Can_Be_Set()
         {
             Brick brick = new Brick();
-            //powerup setup
-            Powerup powerup = new Powerup();
-            powerup.Id = 3;
-            //powerup attribution
-            brick.Powerup = powerup;
+            brick.Powerup.Id = 3;
             Assert.AreEqual(3, brick.Powerup.Id);
         }
         public GameObject CreateGameObjectWithSpriteRenderer()

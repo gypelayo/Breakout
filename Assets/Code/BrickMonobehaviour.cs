@@ -5,6 +5,10 @@ using UnityEngine;
 public class BrickMonobehaviour : MonoBehaviour
 {
     private Brick brick;
+    [SerializeField]
+    private int powerupId;
+    [SerializeField]
+    private GameObject powerupPrefab;
     private GameController gameController;
     private void Start()
     {
@@ -16,6 +20,7 @@ public class BrickMonobehaviour : MonoBehaviour
     {
         brick = new Brick();
         brick.BrickGameObject = gameObject;
+        brick.Powerup.Id = powerupId;
         gameController.bricks.Add(brick);
         gameController.numberOfBricks++;
     }
@@ -25,6 +30,11 @@ public class BrickMonobehaviour : MonoBehaviour
         if (other.collider.tag == "Ball")
         {
             gameController.bricks.Remove(brick);
+            if (powerupId != 0)
+            {
+                GameObject powerup = Instantiate(powerupPrefab,transform.position,Quaternion.identity,null);
+                powerup.GetComponent<PowerupMonobehaviour>().powerupId=powerupId;
+            }
             Destroy(gameObject);
         }
     }
