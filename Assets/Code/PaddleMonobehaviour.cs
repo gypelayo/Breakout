@@ -32,12 +32,7 @@ public class PaddleMonobehaviour : MonoBehaviour
     {
         rb.MovePosition(position);
     }
-    private void OnDestroy()
-    {
-        gameController.paddles[gameController.paddles.Count - 2].IsActive = true;
-        gameController.paddles.Remove(paddle);
-    }
-    private void OnCollisionEnter2D(Collision2D other)
+        private void OnCollisionEnter2D(Collision2D other)
     {
         ReflectBall(other);
     }
