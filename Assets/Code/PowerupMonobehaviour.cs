@@ -7,6 +7,21 @@ public class PowerupMonobehaviour : MonoBehaviour
     public int powerupId;
     [SerializeField]
     private GameObject ballPrefab;
+    private void Start()
+    {
+        switch (powerupId)
+        {
+            case 1:
+                GetComponent<SpriteRenderer>().color = Color.white;
+                break;
+            case 2:
+                GetComponent<SpriteRenderer>().color = Color.yellow;
+                break;
+            case 3:
+                GetComponent<SpriteRenderer>().color = Color.cyan;
+                break;
+        }
+    }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
