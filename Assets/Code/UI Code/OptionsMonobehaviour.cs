@@ -9,7 +9,10 @@ public class OptionsMonobehaviour : MonoBehaviour
     private GameObject optionsMenu;
     [SerializeField]
     private GameObject storeMenu;
-
+    private void Start()
+    {
+        Cursor.visible = true;
+    }
     public void StartGame()
     {
         SceneManager.LoadScene("Breakout", LoadSceneMode.Single);

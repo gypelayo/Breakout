@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
 
     private void Update()
     {
-        balanceText.text = account.Balance.ToString() + "$";
+        balanceText.text = account.Balance.ToString() + "€";
         paddlesText.text = numberOfPaddlesLeft.ToString();
     }
     public void SpawnNewPaddle()
