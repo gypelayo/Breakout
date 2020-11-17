@@ -21,7 +21,8 @@ public class OptionsMonobehaviour : MonoBehaviour
     }
     public void GoToOptions()
     {
-        Debug.Log("Not implemented");
+        optionsMenu.SetActive(true);
+        mainMenu.SetActive(false);
     }
     public void GoToStore()
     {
@@ -30,6 +31,7 @@ public class OptionsMonobehaviour : MonoBehaviour
     }
     public void ReturnToMainMenu()
     {
+        optionsMenu.SetActive(false);
         storeMenu.SetActive(false);
         mainMenu.SetActive(true);
     }
