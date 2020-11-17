@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     public List<Brick> bricks;
@@ -11,8 +12,15 @@ public class GameController : MonoBehaviour
     public int numberOfBricks = 0;
     [SerializeField]
     private GameObject paddlePrefab;
+    public Account account;
+    [SerializeField]
+    private Text balanceText;
+    [SerializeField]
+    private Text paddlesText;
     private void Awake()
     {
+        account = new Account();
+        account.AddFunds(PlayerPrefs.GetInt("Account Balance"));
         Cursor.visible = false;
 
         numberOfPaddlesLeft = 5;
@@ -22,7 +30,12 @@ public class GameController : MonoBehaviour
 
         CreatePaddleList();
         SpawnNewPaddle();
+    }
 
+    private void Update()
+    {
+        balanceText.text = account.Balance.ToString() + "€";
+        paddlesText.text = numberOfPaddlesLeft.ToString();
     }
     public void SpawnNewPaddle()
     {

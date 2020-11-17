@@ -35,10 +35,36 @@ public class BrickMonobehaviour : MonoBehaviour
                 GameObject powerup = Instantiate(powerupPrefab,transform.position,Quaternion.identity,null);
                 powerup.GetComponent<PowerupMonobehaviour>().powerupId=powerupId;
             }
+            gameController.account.AddFunds(ValueGained());
             gameController.bricks.Remove(brick);
             gameController.numberOfBricks--;
             Destroy(gameObject);
         }
+    }
+
+    private int ValueGained()
+    {
+        if (brick.Color == Color.magenta)
+        {
+            return 50;
+        }
+        if (brick.Color == Color.blue)
+        {
+            return 100;
+        }
+        if (brick.Color == Color.green)
+        {
+            return 150;
+        }
+        if (brick.Color == Color.red)
+        {
+            return 200;
+        }
+        else
+        {
+            return 0;
+        }
+
     }
 
 }

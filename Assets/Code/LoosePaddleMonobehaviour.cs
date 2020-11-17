@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LoosePaddleMonobehaviour : MonoBehaviour
 {
@@ -33,8 +34,8 @@ public class LoosePaddleMonobehaviour : MonoBehaviour
         }
         else
         {
-            UnityEditor.EditorApplication.isPlaying = false;
-            Application.Quit();
+            PlayerPrefs.SetInt("Account Balance", gameController.account.Balance);
+            SceneManager.LoadScene("HomePage", LoadSceneMode.Single);
         }
 
     }
