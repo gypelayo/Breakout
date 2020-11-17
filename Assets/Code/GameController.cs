@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.UI;
 public class GameController : MonoBehaviour
 {
     public List<Brick> bricks;
@@ -11,8 +12,13 @@ public class GameController : MonoBehaviour
     public int numberOfBricks = 0;
     [SerializeField]
     private GameObject paddlePrefab;
+    private int balance;
+    [SerializeField]
+    private Text balanceText;
     private void Awake()
     {
+        balance=0;
+        balanceText.text = balance.ToString() + "$";
         Cursor.visible = false;
 
         numberOfPaddlesLeft = 5;
