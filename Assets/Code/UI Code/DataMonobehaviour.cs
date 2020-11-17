@@ -13,7 +13,16 @@ public class DataMonobehaviour : MonoBehaviour
         account = new Account();
         account.AddFunds(PlayerPrefs.GetInt("Account Balance"));
         balanceText = GetComponent<Text>();
+
+    }
+    private void Update()
+    {
         balanceText.text = account.Balance.ToString() + "€";
+    }
+    public void ResetBalance()
+    {
+        account.SubstractFunds(account.Balance);
+        PlayerPrefs.SetInt("Account Balance", account.Balance);
     }
 
 }
