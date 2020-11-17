@@ -20,6 +20,7 @@ public class GameController : MonoBehaviour
     private void Awake()
     {
         account = new Account();
+        account.AddFunds(PlayerPrefs.GetInt("Account Balance"));
         Cursor.visible = false;
 
         numberOfPaddlesLeft = 5;
