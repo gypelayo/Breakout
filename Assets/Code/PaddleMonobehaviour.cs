@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class PaddleMonobehaviour : MonoBehaviour
 {
-    private Paddle paddle;
-    private GameController gameController;
+    public Paddle paddle;
+    public GameController gameController;
     [SerializeField]
-    private float moveSpeed;
-    private Vector3 mousePosition;
-    private Rigidbody2D rb;
-    private Vector2 position;
-    private bool hasBall;
-    private GameObject ballObject;
-    private void Start()
+    public float moveSpeed;
+    public Vector3 mousePosition;
+    public Rigidbody2D rb;
+    public Vector2 position;
+    public bool hasBall;
+    public GameObject ballObject;
+    public void Start()
     {
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         paddle = gameController.paddles[gameController.paddles.Count - 1];
         VariableInit();
     }
-    private void Update()
+    public void Update()
     {
         MouseMovement();
         if (hasBall && Input.GetKeyDown(KeyCode.Mouse0))
@@ -28,16 +28,21 @@ public class PaddleMonobehaviour : MonoBehaviour
             ShootBall();
         }
     }
-    private void FixedUpdate()
+    public void FixedUpdate()
     {
         rb.MovePosition(position);
     }
-    private void OnCollisionEnter2D(Collision2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
-        ReflectBall(other);
+        if (other.collider.tag == "Ball")
+        {
+            other.collider.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+
+            other.collider.GetComponent<Rigidbody2D>().AddForce(ReflectBall(other.transform.position.x - transform.position.x), ForceMode2D.Impulse);
+        }
     }
 
-    private void VariableInit()
+    public void VariableInit()
     {
         moveSpeed = 1f;
         rb = GetComponent<Rigidbody2D>();
@@ -45,7 +50,7 @@ public class PaddleMonobehaviour : MonoBehaviour
         hasBall = true;
         ballObject = transform.GetChild(0).gameObject;
     }
-    private void MouseMovement()
+    public void MouseMovement()
     {
         mousePosition = Input.mousePosition;
         mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
@@ -62,13 +67,8 @@ public class PaddleMonobehaviour : MonoBehaviour
         ballObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 10, ForceMode2D.Impulse);
     }
 
-    private void ReflectBall(Collision2D collision)
+    public Vector2 ReflectBall(float distToCenter)
     {
-        if (collision.collider.tag == "Ball")
-        {
-            collision.collider.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-            float distToCenter = collision.transform.position.x - transform.position.x;
-            collision.collider.GetComponent<Rigidbody2D>().AddForce((Vector2.up + new Vector2(distToCenter / transform.localScale.x, 0).normalized).normalized * 10, ForceMode2D.Impulse);
-        }
+        return (Vector2.up + new Vector2(distToCenter / transform.localScale.x, 0)).normalized * 10;
     }
 }
