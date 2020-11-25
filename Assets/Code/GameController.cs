@@ -3,21 +3,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.UI;
-public class GameController : MonoBehaviour
+
+public interface IGameController
 {
-    public List<Brick> bricks;
-    public List<Paddle> paddles;
-    [SerializeField]
-    public int numberOfPaddlesLeft;
-    public int numberOfBricks = 0;
+    List<Brick> bricks { get; set; }
+    List<Paddle> paddles { get; set; }
+    int numberOfPaddlesLeft { get; set; }
+    int numberOfBricks { get; set; }
+    Account account { get; set; }
+    void Awake();
+    void CreatePaddleList();
+    void LoosePaddle();
+    void SpawnNewPaddle();
+    void Update();
+}
+
+public class GameController : MonoBehaviour, IGameController
+{
+    public List<Brick> bricks { get; set; }
+    public List<Paddle> paddles { get; set; }
+    public int numberOfPaddlesLeft { get; set; }
+    public int numberOfBricks { get; set; }
     [SerializeField]
     private GameObject paddlePrefab;
-    public Account account;
+    public Account account { get; set; }
     [SerializeField]
     private Text balanceText;
     [SerializeField]
     private Text paddlesText;
-    private void Awake()
+    public void Awake()
     {
         account = new Account();
         account.AddFunds(PlayerPrefs.GetInt("Account Balance"));
@@ -32,7 +46,7 @@ public class GameController : MonoBehaviour
         SpawnNewPaddle();
     }
 
-    private void Update()
+    public void Update()
     {
         balanceText.text = account.Balance.ToString() + "€";
         paddlesText.text = numberOfPaddlesLeft.ToString();
@@ -42,7 +56,7 @@ public class GameController : MonoBehaviour
         GameObject firstPaddle = Instantiate(paddlePrefab, paddles[numberOfPaddlesLeft - 1].Position, Quaternion.identity, transform);
         firstPaddle.GetComponent<SpriteRenderer>().color = paddles[numberOfPaddlesLeft - 1].Color;
     }
-    private void CreatePaddleList()
+    public void CreatePaddleList()
     {
         for (int i = 0; i < numberOfPaddlesLeft; i++)
         {

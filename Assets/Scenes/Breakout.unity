@@ -2469,8 +2469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a92bca4ef891847ddafca20ad0e19c3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numberOfPaddlesLeft: 0
-  numberOfBricks: 0
   paddlePrefab: {fileID: 2500635963474648482, guid: 89441e22f771f42b196daa2f7a9624ee, type: 3}
   balanceText: {fileID: 964571202}
   paddlesText: {fileID: 1124864118}

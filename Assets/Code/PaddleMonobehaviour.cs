@@ -37,7 +37,6 @@ public class PaddleMonobehaviour : MonoBehaviour
         if (other.collider.tag == "Ball")
         {
             other.collider.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-
             other.collider.GetComponent<Rigidbody2D>().AddForce(ReflectBall(other.transform.position.x - transform.position.x), ForceMode2D.Impulse);
         }
     }

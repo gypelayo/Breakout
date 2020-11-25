@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class BrickMonobehaviour : MonoBehaviour
 {
-    private Brick brick;
+    public Brick brick;
     [SerializeField]
-    private int powerupId;
+    public int powerupId;
     [SerializeField]
-    private GameObject powerupPrefab;
-    private GameController gameController;
-    private void Start()
+    public GameObject powerupPrefab;
+    public IGameController gameController;
+    public void Start()
     {
         gameController = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameController>();
         BrickSetup();
     }
 
-    private void BrickSetup()
+    public void BrickSetup()
     {
         brick = new Brick();
         brick.BrickGameObject = gameObject;
@@ -25,24 +25,15 @@ public class BrickMonobehaviour : MonoBehaviour
         gameController.numberOfBricks++;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
         if (other.collider.tag == "Ball")
         {
-            gameController.bricks.Remove(brick);
-            if (powerupId != 0)
-            {
-                GameObject powerup = Instantiate(powerupPrefab,transform.position,Quaternion.identity,null);
-                powerup.GetComponent<PowerupMonobehaviour>().powerupId=powerupId;
-            }
-            gameController.account.AddFunds(ValueGained());
-            gameController.bricks.Remove(brick);
-            gameController.numberOfBricks--;
-            Destroy(gameObject);
+            BallCollisionHandler();
         }
     }
 
-    private int ValueGained()
+    public int ValueGained()
     {
         if (brick.Color == Color.magenta)
         {
@@ -64,7 +55,19 @@ public class BrickMonobehaviour : MonoBehaviour
         {
             return 0;
         }
+    }
 
+    public void BallCollisionHandler()
+    {
+        gameController.bricks.Remove(brick);
+        if (powerupId != 0)
+        {
+            GameObject powerup = Instantiate(powerupPrefab, transform.position, Quaternion.identity, null);
+            powerup.GetComponent<PowerupMonobehaviour>().powerupId = powerupId;
+        }
+        gameController.account.AddFunds(ValueGained());
+        gameController.numberOfBricks--;
+        Destroy(gameObject);
     }
 
 }
